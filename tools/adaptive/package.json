@@ -1,0 +1,16 @@
+{
+  "name": "raycast-adaptive-zh-cn",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "inventory": "node cli.mjs inventory",
+    "build": "node cli.mjs build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "acorn": "8.15.0"
+  }
+}

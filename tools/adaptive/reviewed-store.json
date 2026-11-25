@@ -1,0 +1,13 @@
+{
+  "Create, search and update Linear issues, browse projects, cycles, documents and custom views, and see Linear notifications in the menu bar.": "创建、搜索和更新 Linear 工单，浏览项目、迭代、文档及自定义视图，并在菜单栏查看 Linear 通知。",
+  "Control Spotify playback and volume, search songs, albums and podcasts, browse your library, find lyrics and see what's playing in the menu bar.": "控制 Spotify 播放和音量，搜索歌曲、专辑与播客，浏览媒体库、查找歌词，并在菜单栏查看正在播放的内容。",
+  "Translate text with Google Translate and auto-detect the language, translate selected text and copy or paste it, or translate into several languages.": "使用 Google 翻译自动检测语言，翻译所选文本后复制或粘贴，也可同时翻译成多种语言。",
+  "Open recent projects in VS Code, Cursor, Windsurf, VSCodium and other compatible editors, run Command Palette commands, and manage extensions.": "在 VS Code、Cursor、Windsurf、VSCodium 等兼容编辑器中打开最近的项目，运行命令面板中的命令，以及管理扩展。",
+  "Search Slack channels and messages, open chats, send messages, see unread messages, snooze notifications and set your Slack status.": "搜索 Slack 频道和消息，打开聊天、发送和查看未读消息、暂缓通知，以及设置 Slack 状态。",
+  "Search your 1Password vaults, copy passwords, usernames and one-time codes, open logins in your browser, and generate secure passwords.": "搜索 1Password 保险库，复制密码、用户名和一次性验证码，在浏览器中打开登录页面，以及生成安全密码。",
+  "Search, create and update Notion pages and databases, add text to pages, and quickly capture notes to Notion, with Raycast AI tools.": "通过 Raycast AI 工具搜索、创建和更新 Notion 页面与数据库，向页面添加文字，或快速将笔记保存到 Notion。",
+  "Search, install, upgrade and uninstall Homebrew formulae and casks on your Mac, manage services and taps, run brew doctor and check vulnerabilities.": "在 Mac 上搜索、安装、升级和卸载 Homebrew 的 formula 与 cask，管理服务和 tap，以及运行 brew doctor 和检查已知漏洞。",
+  "Search GitHub repositories, create and merge pull requests, manage issues and Actions workflows, and track your GitHub notifications.": "搜索 GitHub 仓库，创建和合并拉取请求，管理议题及 Actions 工作流，并跟踪 GitHub 通知。",
+  "Search Arc browser tabs, spaces, history and downloads, switch to any open tab, and open new windows, Little Arc and incognito windows.": "搜索 Arc 的标签页、空间、历史记录和下载，切换到任意已打开的标签页，或打开新窗口、Little Arc 和无痕窗口。",
+  "Ask ChatGPT and OpenAI models questions, chat in conversations, ask about images, summarize websites and YouTube videos, and run custom AI commands.": "向 ChatGPT 和 OpenAI 模型提问，发起对话、询问图片内容，总结网页和 YouTube 视频，以及运行自定义 AI 命令。"
+}

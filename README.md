@@ -258,3 +258,7 @@ An unofficial **Simplified Chinese localization patch for Raycast on macOS**, ta
 ## 第三方内容
 
 本项目与 Raycast 官方无隶属关系。Raycast 及其应用资源的权利归原权利人所有；本仓库不对第三方资源重新授予许可。Unicode 数据与 Acorn 的许可随包提供。
+
+## 按当前安装版本生成补丁
+
+本分支新增了[适配工具和升级流程](tools/adaptive/README.md)。工具读取本机版本和资源指纹，生成新版的待翻译清单，以及仅适用于该构建的汉化包。已针对 2.14.0.0 补充新增界面和商店文案。
