@@ -1,4 +1,14 @@
-# Raycast macOS 汉化｜简体中文界面与插件汉化包
+# Raycast macOS 简体中文一键安装
+
+适用于 Apple Silicon Mac。本分叉读取本机已安装的 Raycast 版本和资源指纹，在本地生成对应的汉化。**实机验证版本为 2.14.0.0。**
+
+1. 到 [GitHub Releases](https://github.com/aicorevision/raycast-macos-zh-CN/releases/latest) 下载 **raycast-zh-cn-one-click-macos-arm64.zip**。
+2. 完整解压，双击 **安装汉化.command**。安装器自动生成资源、备份、替换界面文案并重新打开 Raycast。
+3. 需要还原时，双击同一目录的 **恢复原版.command**。
+
+下载包已内置运行环境。[详细中文使用说明](tools/adaptive/使用说明.md) · [新版文案维护流程](tools/adaptive/README.md)
+
+## 上游固定版本汉化包
 
 为 macOS 上的 **Raycast 2.11.1.0（Apple Silicon / arm64）** 提供简体中文界面的非官方汉化包。支持主界面、设置、部分提示，以及 100 个商店插件及 Mole 的商店文案和部分内部界面，附带安装与恢复原版工具。
 
