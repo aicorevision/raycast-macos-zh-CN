@@ -44,3 +44,15 @@ npm --prefix tools/adaptive run inventory:windows -- --baseline-report D:/report
 macOS 和 Windows 使用同一个界面扫描器，并从同一份已复核词库读取界面及商店译文。Windows 专用译文维护在 `reviewed-windows-display.json`。命令读取本机官方资源，对内存中的译文结果做语法与指纹检查，输出清单。 [Windows 客户端](https://www.raycast.com/windows)
 
 **2.14.0.0 x64 实测。** 本机扫描命中 137 个资源文件、20,835 处静态显示文案、1 处主搜索占位符和 4 处商店渲染位置。替换次数包括跨文件的重复文案。此前尝试通过 WebView2 调试连接加载汉化，生产版检测后退出。已移除调试配置并重新启动官方应用；Windows 适配尚未通过实机中文显示验证。 `windows-validation.json` 按版本、架构和主程序指纹记录该状态。新构建在完成实机验证前显示为 `unverified`。
+
+### 2.14.0.0 生产版的语言入口核对
+
+本机安装来自 Microsoft Store，MSIX 清单只声明 EN-US。在 Windows 界面语言已为 zh-CN 的环境下，简体中文子目录只有 .NET 和 Windows UI 框架资源。Raycast 主搜索、设置和商店使用包内前端资源。
+
+对该版本宿主程序集和前端资源做了只读检查。
+
+- WebView 内部的资源提供器处理图标和文件预览。Raycast 扩展清单中同名的 resourceProvider 负责按 URI 读取 AI 扩展自身的资源。 [Raycast 扩展清单](https://developers.raycast.com/information/manifest#extension-properties)
+- 后端的 Display Language 取自系统偏好，用于构造 AI 请求的偏好说明。Raycast 公开扩展文档当前列出的受支持界面语言为美式英语。 [Raycast 语言说明](https://developers.raycast.com/basics/prepare-an-extension-for-store#localization--language)
+- WebView2 的资源请求接口在持有 WebView 对象的宿主进程内注册。公开文档与此次对官方安装包的检查均未发现可从第三方扩展注册主界面译文的入口。 [Microsoft WebView2 资源请求接口](https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/webresourcerequested)
+
+需要 Raycast 提供生产模式下的语言资源入口，或提供可修改和构建的 Windows 宿主源码。届时可以复用本目录的界面和商店词库。验收应在保留官方应用版本、关闭远程调试的环境中，分别打开主搜索、通用设置与快捷键、商店列表与扩展详情，核对中文显示和实际操作，并在正常退出后从原图标重新打开复验。当前三项界面验收均待宿主入口。
