@@ -5,7 +5,7 @@ import {
   readdirSync, realpathSync, rmdirSync,
 } from 'node:fs';
 import { homedir } from 'node:os';
-import { dirname, join, normalize, resolve } from 'node:path';
+import { dirname, join, posix, resolve } from 'node:path';
 import { setTimeout as pause } from 'node:timers/promises';
 import { parseArgs } from 'node:util';
 import { fileURLToPath } from 'node:url';
@@ -24,7 +24,7 @@ export function parseManifest(contents) {
   for (const line of contents.trimEnd().split('\n')) {
     const [original, translated, path, extra] = line.split('\t');
     if (!(original === '-' || validHash.test(original)) || !validHash.test(translated)
-        || !path?.startsWith('Contents/Resources/') || normalize(path) !== path
+        || !path?.startsWith('Contents/Resources/') || path.includes('\\') || posix.normalize(path) !== path
         || paths.has(path) || extra !== undefined) {
       throw new Error('发现无效或重复的资源清单路径。');
     }

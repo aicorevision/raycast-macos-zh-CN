@@ -17,5 +17,6 @@ test('rejects manifest paths outside app resources and duplicate paths', () => {
   assert.throws(() => parseManifest(entry('Contents/Resources/../MacOS/Raycast')));
   assert.throws(() => parseManifest(entry('Contents/MacOS/Raycast')));
   assert.throws(() => parseManifest(entry('/Contents/Resources/file')));
+  assert.throws(() => parseManifest(entry('Contents/Resources/..\\MacOS\\Raycast')));
   assert.throws(() => parseManifest(entry('Contents/Resources/file').repeat(2)));
 });

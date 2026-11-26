@@ -25,3 +25,22 @@ build 输出位于 out 下以应用版本命名的新目录。安装时运行目
 ## 2.14.0.0
 
 对照 2.11.1.0 的原版资源，在 2.14.0.0 的实际应用内复核并补充浏览器连接及配对、建议快捷键、计算器区域设置、从系统文本替换或 Alfred 导入片段、MCP 服务器设置与交互表单，以及 AI 命令和更新日志入口的中文文案。使用新版本前保留生成的 inventory.json，作为后续升级的对照来源。
+
+## Windows x64
+
+从仓库根目录运行以下命令。需要 Node.js 20 或以上版本，以及从 Microsoft Store 安装的 Raycast x64。
+
+```powershell
+npm --prefix tools/adaptive ci
+npm --prefix tools/adaptive run inventory:windows
+```
+
+默认输出为 `tools/adaptive/out/windows-x64-<版本>-inventory/inventory.json`。清单列出主程序和界面资源的 SHA-256、已复核词条的命中次数、候选文案，以及匹配主程序指纹的实机加载状态。可以指定 `--out` 新目录和 `--baseline-report` 上次生成的 Windows 清单，查找新增候选。
+
+```powershell
+npm --prefix tools/adaptive run inventory:windows -- --baseline-report D:/reports/previous/inventory.json --out D:/reports/raycast-win-next
+```
+
+macOS 和 Windows 使用同一个界面扫描器，并从同一份已复核词库读取界面及商店译文。Windows 专用译文维护在 `reviewed-windows-display.json`。命令读取本机官方资源，对内存中的译文结果做语法与指纹检查，输出清单。 [Windows 客户端](https://www.raycast.com/windows)
+
+**2.14.0.0 x64 实测。** 本机扫描命中 137 个资源文件、20,835 处静态显示文案、1 处主搜索占位符和 4 处商店渲染位置。替换次数包括跨文件的重复文案。此前尝试通过 WebView2 调试连接加载汉化，生产版检测后退出。已移除调试配置并重新启动官方应用；Windows 适配尚未通过实机中文显示验证。 `windows-validation.json` 按版本、架构和主程序指纹记录该状态。新构建在完成实机验证前显示为 `unverified`。

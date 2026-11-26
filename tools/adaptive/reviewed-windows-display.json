@@ -1,0 +1,51 @@
+{
+  "Search for apps and commands…": {
+    "zh": "搜索应用和命令…",
+    "props": [
+      "placeholder"
+    ]
+  },
+  "Dismiss Suggestions": {
+    "zh": "关闭建议",
+    "props": [
+      "label",
+      "aria-label"
+    ]
+  },
+  "Based on how often you open commands, plus a few the Raycast team recommends. Usage data is stored locally on this device only.": {
+    "zh": "根据命令的打开频率和 Raycast 团队的推荐生成建议。使用数据仅保存在本机。",
+    "props": [
+      "label"
+    ]
+  },
+  "Used for weather temperatures. Automatic follows your region.": {
+    "zh": "用于天气温度。自动模式采用所选地区的温度单位。",
+    "props": [
+      "description"
+    ]
+  },
+  "Show in File Explorer": {
+    "zh": "在文件资源管理器中显示",
+    "props": [
+      "title",
+      "label",
+      "children"
+    ]
+  },
+  "Open in File Explorer": {
+    "zh": "在文件资源管理器中打开",
+    "props": [
+      "title",
+      "label",
+      "children"
+    ]
+  },
+  "Windows Settings": {
+    "zh": "Windows 设置",
+    "props": [
+      "title",
+      "label",
+      "children"
+    ]
+  }
+}

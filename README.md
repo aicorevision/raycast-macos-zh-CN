@@ -8,6 +8,12 @@
 
 下载包已内置运行环境。[详细中文使用说明](tools/adaptive/使用说明.md) · [新版文案维护流程](tools/adaptive/README.md)
 
+## Windows x64 适配
+
+Windows 和 macOS 从这个仓库读取同一份已复核界面词库与商店词库。已在 **Microsoft Store Raycast 2.14.0.0 x64** 生成资源指纹、译文命中清单和待复核文案，并补充了 Windows 搜索、快捷键、区域设置中的文案。
+
+**Windows 当前仅完成资源适配，尚无可安装版。** 实测该版本会拒绝此前使用的 WebView2 调试加载方式并中止启动，已恢复官方应用。 [运行方式和验证范围](tools/adaptive/README.md#windows-x64)
+
 ## 上游固定版本汉化包
 
 为 macOS 上的 **Raycast 2.11.1.0（Apple Silicon / arm64）** 提供简体中文界面的非官方汉化包。支持主界面、设置、部分提示，以及 100 个商店插件及 Mole 的商店文案和部分内部界面，附带安装与恢复原版工具。
@@ -17,9 +23,9 @@
 | 平台 | 项目与安装说明 | 汉化包下载 |
 | --- | --- | --- |
 | macOS · 2.11.1.0 Apple Silicon | [Raycast macOS 汉化](https://github.com/zwjtano/raycast-macos-zh-CN) | [macOS 下载](https://github.com/zwjtano/raycast-macos-zh-CN/releases/latest) |
-| Windows · 2.4.0.0 x64 | [Raycast Windows 汉化](https://github.com/zwjtano/raycast-windows-zh-CN) | [Windows 下载](https://github.com/zwjtano/raycast-windows-zh-CN/releases/latest) |
+| Windows · 2.14.0.0 x64 | [本仓库适配与实机状态](tools/adaptive/README.md#windows-x64) | 暂无 |
 
-Raycast macOS Simplified Chinese Localization。两个平台独立维护，请按系统和 Raycast 版本下载对应安装包。
+社区维护的简体中文汉化。请按系统和 Raycast 的完整版本选择安装包。
 
 **[下载最新版汉化包](https://github.com/zwjtano/raycast-macos-zh-CN/releases/latest)** · [安装教程](#安装教程) · [恢复原版](#恢复与更新) · [插件列表](#插件汉化列表) · [常见问题](#常见问题)
 

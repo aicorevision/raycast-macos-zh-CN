@@ -20,7 +20,7 @@ mkdir -p "$tool/runtime/bin" "$tool/node_modules"
 /bin/cp "$project/安装汉化.command" "$project/恢复原版.command" "$bundle/"
 /bin/chmod 755 "$bundle/安装汉化.command" "$bundle/恢复原版.command"
 /bin/cp "$project/tools/adaptive/使用说明.md" "$bundle/使用说明.md"
-for part in cli.mjs one-click.mjs transform.mjs run-command.sh patch.sh.in \
+for part in cli.mjs frontend-inventory.mjs one-click.mjs transform.mjs run-command.sh patch.sh.in \
   reviewed-display.json reviewed-store.json seed-display.json seed-store.json; do
   /bin/cp "$project/tools/adaptive/$part" "$tool/"
 done

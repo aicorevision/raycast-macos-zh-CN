@@ -5,7 +5,8 @@
   "scripts": {
     "test": "node --test",
     "inventory": "node cli.mjs inventory",
-    "build": "node cli.mjs build"
+    "build": "node cli.mjs build",
+    "inventory:windows": "node --max-old-space-size=4096 windows.mjs"
   },
   "engines": {
     "node": ">=20"

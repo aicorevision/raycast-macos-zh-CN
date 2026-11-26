@@ -1,0 +1,9 @@
+[
+  {
+    "version": "2.14.0.0",
+    "architecture": "x64",
+    "hostSha256": "4891d526de070969a922b92c91be498b9e41c2de5eea375f1c20c884672fd8de",
+    "status": "blocked",
+    "reason": "生产版检测到 WebView2 远程调试后退出，原版已恢复运行。"
+  }
+]
